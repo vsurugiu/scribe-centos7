@@ -17,7 +17,7 @@ sudo rpm -e --nodeps `rpm -qf /usr/bin/autoconf`
 wget http://ftp.gnu.org/gnu/autoconf/autoconf-2.69.tar.gz
 tar xzf autoconf-2.69.tar.gz 
 cd autoconf-2.69/
-./configure
+./configure --prefix=/usr
 make
 sudo make install
 
@@ -27,7 +27,7 @@ echo '=================================================='
 
 cd ~
 wget http://ftp.gnu.org/gnu/automake/automake-1.11.6.tar.gz
-tar -xvaf automake-1.11.6.tar.gz 
+tar xzf automake-1.11.6.tar.gz 
 cd automake-1.11.6
 ./configure --prefix=/usr
 make
